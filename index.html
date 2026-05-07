@@ -8,36 +8,35 @@
   <title>Kalapani Yatra Travels - Andaman DMC</title>
   <meta name="description" content="Discover curated Andaman tour packages with Kalapani Yatra Travels. Island tours, honeymoon packages & group travel." />
 
-  <!-- FAVICONS -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#0b1026">
+  <meta name="theme-color" content="#ffffff">
 
-  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0b1026;
-      --card:#11173a;
-      --text:#e7ecff;
-      --muted:#a9b3d6;
-      --accent:#4fd1c5;
-      --accent-2:#8b5cf6;
-      --shadow:0 10px 30px rgba(0,0,0,0.25);
-      --radius:16px;
+      /* Light Theme Variables */
+      --bg: #f4f7f6;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #2dd4bf;
+      --accent-2: #8b5cf6;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 16px;
     }
 
     *{box-sizing:border-box}
     body{
       margin:0;
-      background:linear-gradient(160deg,#070b1c,#0b1026 40%,#121843);
-      color:var(--text);
-      font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif
+      background: linear-gradient(160deg, #f8fafc, #f1f5f9 40%, #e2e8f0);
+      color: var(--text);
+      font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
     }
 
     a{color:inherit;text-decoration:none}
@@ -50,9 +49,9 @@
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(7,11,28,.65);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(255,255,255,.06)
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,.08);
     }
 
     .nav{
@@ -76,17 +75,18 @@
       border-radius:10px;
     }
 
-    .nav a{padding:10px 14px;border-radius:10px}
-    .nav a:hover{background:rgba(255,255,255,.06)}
+    .nav a{padding:10px 14px;border-radius:10px; transition: background 0.2s;}
+    .nav a:hover{background:rgba(0,0,0,.05)}
 
     .cta{
       background:linear-gradient(120deg,var(--accent),var(--accent-2));
-      color:#0b1026;
+      color: #ffffff;
       font-weight:700;
       padding:10px 16px;
       border-radius:12px;
       box-shadow:var(--shadow)
     }
+    .cta:hover { opacity: 0.9; }
 
     /* HERO */
     .hero-inner{
@@ -100,7 +100,8 @@
     h1{
       font-family:"Playfair Display",serif;
       font-size:clamp(34px,5vw,60px);
-      margin:0 0 16px
+      margin:0 0 16px;
+      color: #0f172a;
     }
 
     .hero p{color:var(--muted);font-size:18px}
@@ -109,9 +110,10 @@
 
     .chip{
       padding:8px 12px;
-      border:1px dashed rgba(255,255,255,.2);
+      border:1px dashed rgba(0,0,0,.15);
       border-radius:999px;
-      background:rgba(255,255,255,.04)
+      background:rgba(0,0,0,.03);
+      color: var(--text);
     }
 
     .hero-card{
@@ -125,7 +127,7 @@
 
     /* SECTION */
     .section{padding:40px 0}
-    .section h2{font-family:"Playfair Display",serif;font-size:32px}
+    .section h2{font-family:"Playfair Display",serif;font-size:32px; color: #0f172a;}
     .lead{color:var(--muted);margin-bottom:24px}
 
     .grid{
@@ -134,31 +136,30 @@
       gap:22px
     }
 
+    /* CARDS */
     .card{
-      background:rgba(255,255,255,.05);
+      background: var(--card);
       border-radius:16px;
       overflow:hidden;
       box-shadow:var(--shadow);
-      transition:.25s
+      transition:.25s;
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
-    .card:hover{transform:translateY(-4px)}
-
+    .card:hover{transform:translateY(-4px); box-shadow: 0 15px 35px rgba(0,0,0,0.12);}
     .card img{aspect-ratio:16/11;object-fit:cover}
     .card .body{padding:16px}
 
     .pill{
       background:linear-gradient(120deg,var(--accent),var(--accent-2));
-      color:#0b1026;
+      color: #ffffff;
       padding:6px 10px;
       border-radius:999px;
       font-size:12px;
       font-weight:700
     }
 
-    .rating{color:#ffd966;margin-left:8px}
-    .price{font-weight:700;margin-top:10px}
-
+    .price{font-weight:700;margin-top:10px; color: #0f172a;}
     .actions{display:flex;gap:10px;margin-top:12px}
 
     .btn{
@@ -166,13 +167,110 @@
       padding:10px;
       text-align:center;
       border-radius:12px;
-      background:rgba(255,255,255,.08)
+      background:rgba(0,0,0,.05);
+      font-weight: 600;
+      transition: background 0.2s;
     }
+    .btn:hover { background: rgba(0,0,0,.08); }
 
     .btn.primary{
       background:linear-gradient(120deg,var(--accent),var(--accent-2));
-      color:#0b1026;
+      color: #ffffff;
       font-weight:700
+    }
+    .btn.primary:hover { opacity: 0.9; }
+
+    /* REVIEWS SECTION */
+    .review-card {
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: .25s;
+    }
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    .review-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .review-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .review-title {
+      margin: 0 0 12px;
+      font-size: 22px;
+      color: #0f172a;
+      line-height: 1.3;
+    }
+    .review-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .stars { 
+      color: #f59e0b; 
+      font-size: 18px; 
+      letter-spacing: 2px; 
+    }
+    .rating-num { 
+      color: #475569; 
+      font-weight: 600; 
+      font-size: 15px; 
+    }
+    .review-text {
+      color: #334155;
+      line-height: 1.6;
+      font-size: 15px;
+      margin: 0 0 24px 0;
+      flex-grow: 1;
+    }
+    
+    /* READ MORE LOGIC STYLES */
+    .more-text {
+      display: none;
+    }
+    .read-more {
+      color: #ef4444;
+      font-weight: 600;
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 14px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .read-more:hover { text-decoration: underline; }
+    
+    .review-details {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .detail-row {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      align-items: start;
+    }
+    .detail-label {
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 15px;
+    }
+    .detail-value {
+      color: #475569;
+      font-size: 15px;
     }
 
     /* CONTACT */
@@ -180,48 +278,86 @@
       display:grid;
       grid-template-columns:1.1fr 1fr;
       gap:22px;
-      background:rgba(255,255,255,.05);
-      padding:20px;
-      border-radius:18px
+      background: var(--card);
+      padding:30px;
+      border-radius:18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
     input,select,textarea{
       width:100%;
       padding:12px;
       border-radius:12px;
-      border:1px solid rgba(255,255,255,.18);
-      background:#070b1c;
-      color:#fff
+      border:1px solid rgba(0,0,0,.15);
+      background: #f8fafc;
+      color: var(--text);
+      font-family: inherit;
+      margin-bottom: 12px;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
     }
 
-    textarea{min-height:110px}
+    textarea{min-height:110px; resize: vertical;}
 
     .submit{
       background:linear-gradient(120deg,var(--accent),var(--accent-2));
-      color:#0b1026;
+      color: #ffffff;
       font-weight:700;
       border:none;
       padding:12px;
       border-radius:12px;
-      cursor:pointer
+      cursor:pointer;
+      font-size: 16px;
+      transition: opacity 0.2s;
     }
+    .submit:hover { opacity: 0.9; }
+
+    .contact h3 { margin-top: 0; color: #0f172a; }
+    .contact ul { padding-left: 20px; color: var(--muted); line-height: 1.8; }
 
     /* FOOTER */
     footer{
       margin-top:40px;
-      padding:24px 0;
-      border-top:1px solid rgba(255,255,255,.08);
-      color:var(--muted)
+      padding:40px 0 24px;
+      border-top:1px solid rgba(0,0,0,.08);
+      color:var(--muted);
+      background: #ffffff;
     }
 
     .footer-grid{
       display:grid;
       grid-template-columns:2fr 1fr 1fr;
-      gap:16px
+      gap:24px
     }
 
-    .social{display:flex;gap:10px;margin-top:8px}
-    .social a{padding:8px 10px;border:1px solid rgba(255,255,255,.12);border-radius:10px}
+    .footer-grid strong { color: #0f172a; display: block; margin-bottom: 12px; }
+
+    .social{display:flex;gap:10px;margin-top:16px}
+    .social a{
+      padding:8px 12px;
+      border:1px solid rgba(0,0,0,.15);
+      border-radius:10px;
+      color: var(--text);
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .social a:hover { background: rgba(0,0,0,0.05); }
+
+    .footer-grid p { margin: 8px 0; }
+    .footer-grid p a:hover { color: var(--accent); }
+
+    .copyright {
+      text-align:center;
+      margin-top:40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      font-size: 14px;
+    }
 
     @media(max-width:960px){
       .hero-inner,.contact{grid-template-columns:1fr}
@@ -232,6 +368,7 @@
     @media(max-width:640px){
       .grid{grid-template-columns:1fr}
       .hide-sm{display:none}
+      .detail-row { grid-template-columns: 100px 1fr; }
     }
   </style>
 </head>
@@ -246,6 +383,7 @@
     </div>
     <nav class="hide-sm">
       <a href="#destinations">Destinations</a>
+      <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
       <a href="gallery.html" class="cta">Gallery</a>
     </nav>
@@ -265,25 +403,25 @@
         <div class="chip">Hotel Accommodation</div>
         <div class="chip">Food & Festivals</div>
       </div>
-    </div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
-      <a href="#destinations" class="cta">Explore Destinations</a>
-      <a href="gallery.html" class="btn">View Gallery</a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
+        <a href="#destinations" class="cta">Explore Destinations</a>
+        <a href="gallery.html" class="btn">View Gallery</a>
+      </div>
     </div>
 
     <div class="hero-card">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop" alt="Andaman Beach">
     </div>
   </div>
 </section>
 
 <section id="destinations" class="section container">
-  <h2>Featured Packages</h2>
+  <center><h2>Featured Packages</h2></center>
   <p class="lead">Carefully designed Andaman tour packages for every traveler.</p>
 
   <div class="grid">
     <div class="card">
-      <img src="assets/img12.jpeg">
+      <img src="assets/img12.jpeg" alt="Kalapani Yatra">
       <div class="body">
         <span class="pill">Island Escape</span>
         <h3>Kalapani Yatra (5D/4N)</h3>
@@ -296,7 +434,7 @@
     </div>
 
     <div class="card">
-      <img src="assets/img11.jpeg">
+      <img src="assets/img11.jpeg" alt="Honeymoon Package">
       <div class="body">
         <span class="pill">Honeymoon</span>
         <h3>Honeymoon Package (6D/5N)</h3>
@@ -309,7 +447,7 @@
     </div>
 
     <div class="card">
-      <img src="assets/img13.jpeg">
+      <img src="assets/img13.jpeg" alt="Group Package">
       <div class="body">
         <span class="pill">Group Tour</span>
         <h3>Andaman Group Package</h3>
@@ -323,12 +461,113 @@
   </div>
 </section>
 
+<section id="reviews" class="section container">
+  <center><h2>Traveler Reviews</h2></center>
+  <p class="lead">See what our guests have to say about their Andaman experiences.</p>
+
+  <div class="grid">
+    
+    <div class="review-card">
+      <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=600&auto=format&fit=crop" alt="Happy Travelers" class="review-img">
+      <div class="review-content">
+        <h3 class="review-title">Excellent Hospitality by Tour Leaders!</h3>
+        <div class="review-rating">
+          <span class="stars">★★★★★</span> <span class="rating-num">( 5.0 )</span>
+        </div>
+        <p class="review-text">
+          Kalapani Yatra's Andaman tour was unforgettable! The tour leaders planning was very good. They provided all information about all the tourist spots in an excellent manner. They took care of all the tourists and guided us from time to time<span class="more-text">. They were constant companions from start to finish. Both tour leaders are extremely pleasant and welcoming. Highly recommended for anyone visiting!</span><button class="read-more" onclick="toggleReadMore(this)">Read More</button>
+        </p>
+        <div class="review-details">
+          <div class="detail-row">
+            <span class="detail-label">Guest Name:</span>
+            <span class="detail-value">Milind Chandrachood</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tour Name:</span>
+            <span class="detail-value">Island Escape</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tour Date:</span>
+            <span class="detail-value">Apr 8, 2026</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tour leader:</span>
+            <span class="detail-value">Aftab & Atul</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=600&auto=format&fit=crop" alt="Couple on beach" class="review-img">
+      <div class="review-content">
+        <h3 class="review-title">A Dreamy Honeymoon Experience!</h3>
+        <div class="review-rating">
+          <span class="stars">★★★★★</span> <span class="rating-num">( 5.0 )</span>
+        </div>
+        <p class="review-text">
+          From the seamless ferry transfers to Havelock to the beautifully decorated rooms, everything was perfect. The team ensured we had a private and romantic trip without any logistical headaches<span class="more-text">. The candlelight dinner on the beach was the absolute highlight of our entire vacation. Thank you Kalapani Yatra!</span><button class="read-more" onclick="toggleReadMore(this)">Read More</button>
+        </p>
+        <div class="review-details">
+          <div class="detail-row">
+            <span class="detail-label">Guest Name:</span>
+            <span class="detail-value">Priya & Rahul</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tour Name:</span>
+            <span class="detail-value">Honeymoon Special</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tour Date:</span>
+            <span class="detail-value">May 2, 2026</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tour leader:</span>
+            <span class="detail-value">Vikram Singh</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=600&auto=format&fit=crop" alt="Scuba Diving" class="review-img">
+      <div class="review-content">
+        <h3 class="review-title">Thrilling Scuba & Flawless Execution</h3>
+        <div class="review-rating">
+          <span class="stars">★★★★☆</span> <span class="rating-num">( 4.5 )</span>
+        </div>
+        <p class="review-text">
+          Our group of friends had the best time. The water sports coordinators were highly professional, and safety was their top priority. The entire itinerary was perfectly paced for both adventure and relaxation<span class="more-text">. Would definitely recommend them to anyone looking to explore Neil Island and experience top-tier diving.</span><button class="read-more" onclick="toggleReadMore(this)">Read More</button>
+        </p>
+        <div class="review-details">
+          <div class="detail-row">
+            <span class="detail-label">Guest Name:</span>
+            <span class="detail-value">The Sharma Group</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tour Name:</span>
+            <span class="detail-value">Adventure Package</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tour Date:</span>
+            <span class="detail-value">Mar 15, 2026</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Tour leader:</span>
+            <span class="detail-value">Deepak & Rohit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section id="contact" class="section container">
-  <h2>Plan Your Trip</h2>
+  <center><h2>Plan Your Trip</h2></center>
   <p class="lead">Send us your details and we’ll get back within 24 hours.</p>
 
   <div class="contact">
-    <!-- FORMSPREE FORM -->
     <form action="https://formspree.io/f/mrekzbya" method="POST">
       <input type="text" name="name" placeholder="Full Name" required>
       <input type="email" name="email" placeholder="Email Address" required>
@@ -340,7 +579,7 @@
         <option>Custom</option>
       </select>
       <textarea name="message" placeholder="Your travel requirements" required></textarea>
-      <button class="submit" type="submit">Request Itinerary</button>
+      <center><button class="submit" type="submit">Request Itinerary</button></center>
     </form>
 
     <div>
@@ -361,11 +600,12 @@
   <div class="container footer-grid">
     <div>
       <div class="brand">
-        <img src="assets/logo.png" class="logo-img">
+        <img src="assets/logo.png" class="logo-img" alt="Logo">
         <strong>Kalapani Yatra Travels</strong>
       </div>
+      <p style="margin-top: 10px; font-size: 14px;">Your trusted Destination Management Company for the Andaman & Nicobar Islands.</p>
       <div class="social">
-        <a href="https://www.instagram.com/kalapani__yatra?igsh=MXd5bnpneHJzZ21vcw==">Instagram</a>
+        <a href="https://www.instagram.com/kalapani__yatra?igsh=MXd5bnpneHJzZ21vcw==" target="_blank">Instagram</a>
         <a href="#">Facebook</a>
         <a href="#">YouTube</a>
       </div>
@@ -374,21 +614,40 @@
     <div>
       <strong>Explore</strong>
       <p><a href="#destinations">Packages</a></p>
+      <p><a href="#reviews">Reviews</a></p>
       <p><a href="gallery.html">Gallery</a></p>
+      <p><a href="#contact">Contact Us</a></p>
     </div>
 
     <div>
       <strong>Contact</strong>
-      <p>9933237370 / 7063968084</p>
-      <p>info.kalapaniyatra@gmail.com</p>
-      <p>Corbyn Chowk, Near petrol pump, Brar Complex, 744104, Sri Vijayapuram, Andaman & Nicobar Island</p>
+      <p>📞 9933237370 / 7063968084</p>
+      <p>✉️ info.kalapaniyatra@gmail.com</p>
+      <p>📍 Corbyn Chowk, Near petrol pump, Brar Complex, 744104, Sri Vijayapuram, Andaman & Nicobar Island</p>
     </div>
   </div>
 
-  <div style="text-align:center;margin-top:20px">
-    © 2025 Kalapani Yatra Travels
+  <div class="container copyright">
+    © 2026 Kalapani Yatra Travels. All Rights Reserved.
   </div>
 </footer>
+
+<script>
+  function toggleReadMore(btn) {
+    // The hidden text span is placed immediately before the button
+    const moreText = btn.previousElementSibling;
+    
+    if (moreText.style.display === "inline") {
+      // Hide the text
+      moreText.style.display = "none";
+      btn.textContent = "Read More";
+    } else {
+      // Show the text
+      moreText.style.display = "inline";
+      btn.textContent = " Read Less";
+    }
+  }
+</script>
 
 </body>
 </html>
